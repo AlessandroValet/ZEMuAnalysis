@@ -124,7 +124,7 @@ lep2_FourMom = ROOT.TLorentzVector()
 #Start looping over events
 print "This sample has ", mytree.GetEntriesFast(), " events"
 
-
+debug = 0
 for jentry in xrange(nentries):
     
     #check on imported tree
@@ -204,7 +204,7 @@ for jentry in xrange(nentries):
 
 #________________________________________________________________________________________________________________
 
-    #Evaluate Z mass
+    #Evauluate Z mass
  
 #________________________________________________________________________________________________________________
 
@@ -214,47 +214,49 @@ for jentry in xrange(nentries):
     Zcand_FourMom = lep1_FourMom + lep2_FourMom
 
 
-    if booleancut and met_pt < 34. : 
+    if (booleancut and met_pt  < 34.) or not booleancut : 
 
       h_Jetpt.Fill(Maxjet, Event_Weight)
       Jetpt[0] = Maxjet
       eventweight[0] = Event_Weight 
 
-    if booleancut and Maxjet < 70. :
+    if (booleancut and Maxjet < 70.) or not booleancut :
 
       h_PuppiMETpt.Fill(met_pt, Event_Weight)
       PuppiMetpt[0] = met_pt 
       eventweight[0] = Event_Weight
 
-    if booleancut and Maxjet < 70. and met_pt < 34. :
+    if (booleancut and Maxjet < 70. and met_pt < 34.) or not booleancut :
     
-	     if samplename == "Data_2018":
+	    if samplename == "Data_2018":
 	       if (Zcand_FourMom.M() <= 85.5 or Zcand_FourMom.M() >= 95.3) : 
-		          h_Memu.Fill(Zcand_FourMom.M(), Event_Weight)
-		          Memu[0] = Zcand_FourMom.M()
-	     else:
+		   h_Memu.Fill(Zcand_FourMom.M(), Event_Weight)
+		   Memu[0] = Zcand_FourMom.M()
+	    else:
 	       #Fill histogram w/o blind analysis
 	       h_Memu.Fill(Zcand_FourMom.M(), Event_Weight)
 	       Memu[0] = Zcand_FourMom.M()
 
-       h_Mueta.Fill(lep1_eta, Event_Weight)
-       h_Mupt.Fill(lep1_pt, Event_Weight)
-       h_Muphi.Fill(lep1_phi, Event_Weight)
-       h_Eeta.Fill(lep2_eta, Event_Weight)
-       h_Ept.Fill(lep2_pt, Event_Weight)
-       h_Ephi.Fill(lep2_phi, Event_Weight)
-       h_PuppiMETphi.Fill(met_phi, Event_Weight)
+            h_Mueta.Fill(lep1_eta, Event_Weight)
+            h_Mupt.Fill(lep1_pt, Event_Weight)
+            h_Muphi.Fill(lep1_phi, Event_Weight)
+            h_Eeta.Fill(lep2_eta, Event_Weight)
+            h_Ept.Fill(lep2_pt, Event_Weight)
+            h_Ephi.Fill(lep2_phi, Event_Weight)
+            h_PuppiMETphi.Fill(met_phi, Event_Weight)
 
    
-       Mupt[0] = lep1_pt
-       Ept[0] = lep2_pt
-       eventweight[0] = Event_Weight
+            Mupt[0] = lep1_pt
+            Ept[0] = lep2_pt
+            eventweight[0] = Event_Weight
 
-    tree_output.Fill()
+            tree_output.Fill()
 
 
 fOutput.Write()
 fOutput.Close()
+
+print debug
 
 path = todaywd + "/" + samplename #"/"
 try:
@@ -265,6 +267,8 @@ else:
     print ("Successfully created the directory %s " % path)
 
 print "Number of events processed = ", Nevts_per_sample
+
+
 
 
 
