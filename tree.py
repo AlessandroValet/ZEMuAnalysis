@@ -124,7 +124,7 @@ lep2_FourMom = ROOT.TLorentzVector()
 #Start looping over events
 print "This sample has ", mytree.GetEntriesFast(), " events"
 
-debug = 0
+
 for jentry in xrange(nentries):
     
     #check on imported tree
@@ -255,8 +255,6 @@ for jentry in xrange(nentries):
 
 fOutput.Write()
 fOutput.Close()
-
-print debug
 
 path = todaywd + "/" + samplename #"/"
 try:
