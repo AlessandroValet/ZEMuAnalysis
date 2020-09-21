@@ -5,32 +5,34 @@ fInput1.cd()
 
 workspace1 = fInput1.Get("myworkspace")
 
-mass = workspace1.var("Memu")
 sigPDF = workspace1.pdf("sigPDF")
 
 fInput2 = ROOT.TFile("ws_bkg.root")
 fInput2.cd()
 
 workspace2 = fInput2.Get("myworkspace")
-
 mass = workspace2.var("Memu")
+
 bkgPDF = workspace2.pdf("bkgPDF")
 
 frac = ROOT.RooRealVar("frac","Fraction of signal",0.1,0.,1.)
 
 
-br_rat = ROOT.RooRealVar("br_rat","branching ratio",1.,0.00001,5.)
+br_rat = ROOT.RooRealVar("br_rat","branching ratio",0.0000001,0.0000000001,0.0001)
 lumi = ROOT.RooRealVar("lumi","The luminosity",59.74)
 cross_sig = ROOT.RooRealVar("cross_sig","cross section", 2075./0.0336)
 Nsig_form = ROOT.RooFormulaVar("Nsig_form","@0*@1*@2",ROOT.RooArgList(br_rat,cross_sig,lumi))
 
-finalPDF = ROOT.RooAddPdf("finalPDF","The total PDF",ROOT.RooArgList(sigPDF,bkgPDF),ROOT.RooArgList(Nsig_form))
+Nbkg = ROOT.RooRealVar("Nbkg","Number of background events",10000.,1.,20876.)
 
-dataset = finalPDF.generate(ROOT.RooArgSet(mass),50491)
+finalPDF = ROOT.RooAddPdf("finalPDF","The total PDF",ROOT.RooArgList(sigPDF,bkgPDF),ROOT.RooArgList(Nsig_form,Nbkg))
 
-finalPDF.fitTo(dataset)
+dataset = finalPDF.generate(ROOT.RooArgSet(mass),20876)
+
+finalPDF.fitTo(dataset,ROOT.RooFit.Extended(1))
 
 massplot = mass.frame(50)
+
 dataset.plotOn(massplot)
 finalPDF.plotOn(massplot)
 
