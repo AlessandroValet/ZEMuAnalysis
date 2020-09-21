@@ -18,23 +18,25 @@ bkgPDF = workspace2.pdf("bkgPDF")
 frac = ROOT.RooRealVar("frac","Fraction of signal",0.1,0.,1.)
 
 
-br_rat = ROOT.RooRealVar("br_rat","branching ratio",0.0000001,0.0000000001,0.0001)
+br_rat = ROOT.RooRealVar("br_rat","branching ratio",0.000001,0.0000000001,0.0001)
 lumi = ROOT.RooRealVar("lumi","The luminosity",59.74)
 cross_sig = ROOT.RooRealVar("cross_sig","cross section", 2075./0.0336)
 Nsig_form = ROOT.RooFormulaVar("Nsig_form","@0*@1*@2",ROOT.RooArgList(br_rat,cross_sig,lumi))
 
-Nbkg = ROOT.RooRealVar("Nbkg","Number of background events",10000.,1.,20876.)
+Nbkg = ROOT.RooRealVar("Nbkg","Number of background events",19205.,1.,20876.)
 
 finalPDF = ROOT.RooAddPdf("finalPDF","The total PDF",ROOT.RooArgList(sigPDF,bkgPDF),ROOT.RooArgList(Nsig_form,Nbkg))
 
 dataset = finalPDF.generate(ROOT.RooArgSet(mass),20876)
 
-finalPDF.fitTo(dataset,ROOT.RooFit.Extended(1))
+
+finalPDF.fitTo(dataset)
 
 massplot = mass.frame(50)
 
 dataset.plotOn(massplot)
 finalPDF.plotOn(massplot)
+
 
 
 c1 = ROOT.TCanvas()
