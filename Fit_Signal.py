@@ -1,6 +1,6 @@
 import ROOT
 
-mass = ROOT.RooRealVar("Memu","memu",91.,75.,110.,"GeV/c^2")
+mass = ROOT.RooRealVar("Memu","memu",91.,75.,120.,"GeV/c^2")
 
 mean = ROOT.RooRealVar("mean","mean",91.,75.,110.)
 sigma = ROOT.RooRealVar("sigma","sigma",3.,0.1,6.)
@@ -17,9 +17,9 @@ widthgauss = ROOT.RooRealVar("widthgauss","The width of the gaussian",7.,0.1,10.
 gaussPDF = ROOT.RooGaussian("gaussPDF","The gaussian function",mass,meangauss,widthgauss)
 
 
-frac = ROOT.RooRealVar("frac","Fraction of signal",0.6,0.,1.)
+frac_sign = ROOT.RooRealVar("frac_sign","Fraction of signal",0.6,0.,1.)
 
-totPDF = ROOT.RooAddPdf("totPDF","The total PDF",ROOT.RooArgList(signalPDF,gaussPDF),ROOT.RooArgList(frac))
+sigPDF = ROOT.RooAddPdf("sigPDF","The total PDF",ROOT.RooArgList(signalPDF,gaussPDF),ROOT.RooArgList(frac_sign))
 
 
 
@@ -30,17 +30,26 @@ tree = fileInput.Get("Cumulative_Events")
 
 dataset = ROOT.RooDataSet("dataset","dataset",ROOT.RooArgSet(mass),ROOT.RooFit.Import(tree))
 
-totPDF.fitTo(dataset)
 
-xframe.chiSquare()
+sigPDF.fitTo(dataset)
 
-xframe = mass.frame(50)
+alpha.setConstant(ROOT.kTRUE)
+enne.setConstant(ROOT.kTRUE)
+sigma.setConstant(ROOT.kTRUE)
+mean.setConstant(ROOT.kTRUE)
+frac_sign.setConstant(ROOT.kTRUE)
+meangauss.setConstant(ROOT.kTRUE)
+widthgauss.setConstant(ROOT.kTRUE)
+
+
+xframe = mass.frame(45)
 dataset.plotOn(xframe)
-totPDF.plotOn(xframe)
+sigPDF.plotOn(xframe)
 xframe.SetTitle("")
 xframe.GetXaxis().SetTitle("m_{K^{+}K^{-}#gamma} [GeV]")
 xframe.GetXaxis().SetRangeUser(0.,170.)
 
+print xframe.chiSquare()
 
 c1 = ROOT.TCanvas()
 c1.cd()
@@ -50,9 +59,11 @@ c1.SaveAs("fitsignal.pdf")
 
 #create Workspace
 workspace = ROOT.RooWorkspace("myworkspace")
-getattr(workspace,'import')(totPDF)
+getattr(workspace,'import')(sigPDF)
 
 fOut = ROOT.TFile("ws_signal.root","RECREATE")
 fOut.cd()
 workspace.Write()
 fOut.Close()
+
+del workspace 
