@@ -7,6 +7,7 @@ workspace1 = fInput1.Get("myworkspace")
 
 sigPDF = workspace1.pdf("sigPDF")
 
+
 fInput2 = ROOT.TFile("ws_bkg.root")
 fInput2.cd()
 
@@ -18,16 +19,17 @@ bkgPDF = workspace2.pdf("bkgPDF")
 frac = ROOT.RooRealVar("frac","Fraction of signal",0.1,0.,1.)
 
 
-br_rat = ROOT.RooRealVar("br_rat","branching ratio",0.000001,0.0000000001,0.0001)
+br_rat = ROOT.RooRealVar("br_rat","branching ratio",0.000001,-0.0001,0.0000001) #-6  0.000001,-0.0001,0.0000001 / 0.0001,0.000001,0.001
 lumi = ROOT.RooRealVar("lumi","The luminosity",59.74)
 cross_sig = ROOT.RooRealVar("cross_sig","cross section", 2075./0.0336)
 Nsig_form = ROOT.RooFormulaVar("Nsig_form","@0*@1*@2",ROOT.RooArgList(br_rat,cross_sig,lumi))
 
-Nbkg = ROOT.RooRealVar("Nbkg","Number of background events",19205.,1.,20876.)
+Nbkg = ROOT.RooRealVar("Nbkg","Number of background events",7890.,5000.,10000.)
 
 finalPDF = ROOT.RooAddPdf("finalPDF","The total PDF",ROOT.RooArgList(sigPDF,bkgPDF),ROOT.RooArgList(Nsig_form,Nbkg))
 
-dataset = finalPDF.generate(ROOT.RooArgSet(mass),20876)
+dataset = finalPDF.generate(ROOT.RooArgSet(mass),7895)
+dataset.SetName("dataset")
 
 
 finalPDF.fitTo(dataset)
@@ -47,8 +49,11 @@ c1.SaveAs("totalfit.pdf")
 #Create Workspace
 workspace = ROOT.RooWorkspace("myworkspace")
 getattr(workspace,'import')(finalPDF)
+getattr(workspace,'import')(dataset)
 
 fOut = ROOT.TFile("ws_final.root","RECREATE")
 fOut.cd()
 workspace.Write()
 fOut.Close()
+
+del workspace 
