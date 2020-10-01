@@ -1,0 +1,127 @@
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+[#1] INFO:Minization -- p.d.f. provides expected number of events, including extended term in likelihood.
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+[#1] INFO:Minization --  The following expressions have been identified as constant and will be precalculated and cached: (sigPDF)
+[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (bkgPDF)
+ **********
+ **    1 **SET PRINT           1
+ **********
+ **********
+ **    2 **SET NOGRAD
+ **********
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 Nbkg         7.89000e+03  5.00000e+02    5.00000e+03  1.00000e+04
+     2 a_bkg       -1.12382e+00  4.56668e-02   -3.00000e+00  3.00000e+00
+     3 b_bkg        4.27119e-01  4.03332e-02   -3.00000e+00  3.00000e+00
+     4 br_rat      -4.99500e-05  constant
+     5 c_bkg       -1.50853e-01  1.65384e-02   -3.00000e+00  3.00000e+00
+ **********
+ **    3 **SET ERR         0.5
+ **********
+ **********
+ **    4 **SET PRINT           1
+ **********
+ **********
+ **    5 **SET STR           1
+ **********
+ NOW USING STRATEGY  1: TRY TO BALANCE SPEED AGAINST RELIABILITY
+ **********
+ **    6 **MIGRAD        2500           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=-34963.8 FROM MIGRAD    STATUS=INITIATE       14 CALLS          15 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Nbkg         7.89000e+03   5.00000e+02   2.03999e-01  -6.46230e+01
+   2  a_bkg       -1.12382e+00   4.56668e-02   1.64189e-02   2.60457e+02
+   3  b_bkg        4.27119e-01   4.03332e-02   1.35832e-02   2.63482e+02
+   4  br_rat      -4.99500e-05   constant   
+   5  c_bkg       -1.50853e-01   1.65384e-02   5.51982e-03  -3.98978e+02
+                               ERR DEF= 0.5
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-34968.6 FROM MIGRAD    STATUS=CONVERGED      79 CALLS          80 TOTAL
+                     EDM=5.61108e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Nbkg         8.08632e+03   8.88073e+01   4.72365e-03   1.59551e-01
+   2  a_bkg       -1.12264e+00   1.44706e-02   5.53266e-04  -7.63518e-01
+   3  b_bkg        4.06663e-01   1.41739e-02   5.19375e-04  -9.24911e-01
+   4  br_rat      -4.99500e-05   constant   
+   5  c_bkg       -1.29457e-01   1.34192e-02   4.58091e-04   3.95892e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  4    ERR DEF=0.5
+  7.890e+03 -1.148e-02  2.838e-02 -2.856e-02 
+ -1.148e-02  2.094e-04 -8.951e-05  1.036e-04 
+  2.838e-02 -8.951e-05  2.009e-04 -9.461e-05 
+ -2.856e-02  1.036e-04 -9.461e-05  1.801e-04 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      5
+        1  0.02797   1.000 -0.009  0.023 -0.024
+        2  0.56884  -0.009  1.000 -0.436  0.534
+        3  0.53707   0.023 -0.436  1.000 -0.497
+        5  0.60936  -0.024  0.534 -0.497  1.000
+Number of free parameters from FitConfig = 5
+Number of free parameters from Minimizer = 4
+ **********
+ **    7 **SET ERR         0.5
+ **********
+ **********
+ **    8 **SET PRINT           1
+ **********
+ **********
+ **    9 **HESSE        2500
+ **********
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-34968.6 FROM HESSE     STATUS=OK             23 CALLS         103 TOTAL
+                     EDM=5.61195e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  Nbkg         8.08632e+03   8.88072e+01   9.44730e-04   2.36734e-01
+   2  a_bkg       -1.12264e+00   1.44849e-02   2.21306e-05  -3.83550e-01
+   3  b_bkg        4.06663e-01   1.42009e-02   1.03875e-04   1.35973e-01
+   4  br_rat      -4.99500e-05   constant   
+   5  c_bkg       -1.29457e-01   1.34168e-02   9.16182e-05  -4.31658e-02
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  4    ERR DEF=0.5
+  7.890e+03 -1.160e-02  2.850e-02 -2.866e-02 
+ -1.160e-02  2.098e-04 -9.052e-05  1.037e-04 
+  2.850e-02 -9.052e-05  2.017e-04 -9.501e-05 
+ -2.866e-02  1.037e-04 -9.501e-05  1.800e-04 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      5
+        1  0.02804   1.000 -0.009  0.023 -0.024
+        2  0.57001  -0.009  1.000 -0.440  0.533
+        3  0.53957   0.023 -0.440  1.000 -0.499
+        5  0.60918  -0.024  0.533 -0.499  1.000
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooAddPdf::finalPDF
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooAddPdf::sigPDF
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooCBShape::signalPDF
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooRealVar::Memu
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooRealVar::mean
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooRealVar::sigma
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooRealVar::alpha
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooRealVar::enne
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooRealVar::frac_sign
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooGaussian::gaussPDF
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooRealVar::meangauss
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooRealVar::widthgauss
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooFormulaVar::Nsig_form
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooRealVar::br_rat
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooRealVar::cross_sig
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooRealVar::lumi
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooChebychev::bkgPDF
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooRealVar::a_bkg
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooRealVar::b_bkg
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooRealVar::c_bkg
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing RooRealVar::Nbkg
+[#1] INFO:ObjectHandling -- RooWorkspace::import(myworkspace) importing dataset dataset
