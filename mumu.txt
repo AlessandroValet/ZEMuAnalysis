@@ -1,0 +1,256 @@
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(data): fit range of variable M_ll expanded to nearest bin boundaries: [75,110] --> [75,110]
+Number of events to fit  35
+[#1] INFO:Minization -- p.d.f. provides expected number of events, including extended term in likelihood.
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sigpdf1,sigpdf2,bkgpdf)
+ **********
+ **    1 **SET PRINT           1
+ **********
+ **********
+ **    2 **SET NOGRAD
+ **********
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 N_bkg        2.80000e+06  9.99000e+05    1.00000e+04  1.00000e+07
+     2 N_sig        1.90000e+07  9.00000e+06    1.00000e+06  1.00000e+08
+ MINUIT WARNING IN PARAM DEF
+ ============== LIMITS ON PARAM2 TOO FAR APART.
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     3 a_bkg        1.00000e-01  2.00000e+00   -1.00000e+01  1.00000e+01
+     4 alpha        1.00000e+00  1.90000e-01    1.00000e-01  2.00000e+00
+     5 b_bkg        1.00000e-01  2.00000e+00   -1.00000e+01  1.00000e+01
+     6 enne         4.00000e+00  9.90000e-01    1.00000e-01  1.00000e+01
+     7 fracsig      7.60000e-01  1.00000e-01    0.00000e+00  1.00000e+00
+     8 mean         9.10000e+01  1.00000e+00    8.50000e+01  9.50000e+01
+     9 mean2        9.10000e+01  2.00000e+00    7.00000e+01  9.50000e+01
+    10 sigma        1.70000e+00  4.90000e-01    1.00000e-01  5.00000e+00
+    11 sigma2       3.00000e+00  4.90000e-01    1.00000e-01  5.00000e+00
+ **********
+ **    3 **SET ERR         0.5
+ **********
+ **********
+ **    4 **SET PRINT           1
+ **********
+ **********
+ **    5 **SET STR           1
+ **********
+ NOW USING STRATEGY  1: TRY TO BALANCE SPEED AGAINST RELIABILITY
+ **********
+ **    6 **MIGRAD        5500           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-2.87917e+08) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N_bkg=2.8e+06, N_sig=1.9e+07, a_bkg=2.09798, alpha=1, b_bkg=0.1, enne=4, fracsig=0.76, mean=91, mean2=91, sigma=1.7, sigma2=3
+RooChebychev::bkgpdf[ x=M_ll coefList=(a_bkg,b_bkg) ]
+     p.d.f value is less than zero (-0.949306), forcing value to zero @ x=M_ll=75.5, coefList=(a_bkg = 2.09798,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.850973), forcing value to zero @ x=M_ll=76.5, coefList=(a_bkg = 2.09798,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.751333), forcing value to zero @ x=M_ll=77.5, coefList=(a_bkg = 2.09798,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.650387), forcing value to zero @ x=M_ll=78.5, coefList=(a_bkg = 2.09798,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.548135), forcing value to zero @ x=M_ll=79.5, coefList=(a_bkg = 2.09798,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.444576), forcing value to zero @ x=M_ll=80.5, coefList=(a_bkg = 2.09798,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.339712), forcing value to zero @ x=M_ll=81.5, coefList=(a_bkg = 2.09798,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.233542), forcing value to zero @ x=M_ll=82.5, coefList=(a_bkg = 2.09798,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.126065), forcing value to zero @ x=M_ll=83.5, coefList=(a_bkg = 2.09798,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.017282), forcing value to zero @ x=M_ll=84.5, coefList=(a_bkg = 2.09798,b_bkg = 0.1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-2.87917e+08) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N_bkg=2.8e+06, N_sig=1.9e+07, a_bkg=-1.90202, alpha=1, b_bkg=0.1, enne=4, fracsig=0.76, mean=91, mean2=91, sigma=1.7, sigma2=3
+RooChebychev::bkgpdf[ x=M_ll coefList=(a_bkg,b_bkg) ]
+     p.d.f value is less than zero (-0.025286), forcing value to zero @ x=M_ll=101.5, coefList=(a_bkg = -1.90202,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.121565), forcing value to zero @ x=M_ll=102.5, coefList=(a_bkg = -1.90202,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.216538), forcing value to zero @ x=M_ll=103.5, coefList=(a_bkg = -1.90202,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.310205), forcing value to zero @ x=M_ll=104.5, coefList=(a_bkg = -1.90202,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.402565), forcing value to zero @ x=M_ll=105.5, coefList=(a_bkg = -1.90202,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.493620), forcing value to zero @ x=M_ll=106.5, coefList=(a_bkg = -1.90202,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.583368), forcing value to zero @ x=M_ll=107.5, coefList=(a_bkg = -1.90202,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.671810), forcing value to zero @ x=M_ll=108.5, coefList=(a_bkg = -1.90202,b_bkg = 0.1)
+     p.d.f value is less than zero (-0.758947), forcing value to zero @ x=M_ll=109.5, coefList=(a_bkg = -1.90202,b_bkg = 0.1)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-2.87917e+08) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N_bkg=2.8e+06, N_sig=1.9e+07, a_bkg=0.1, alpha=1, b_bkg=2.09798, enne=4, fracsig=0.76, mean=91, mean2=91, sigma=1.7, sigma2=3
+RooChebychev::bkgpdf[ x=M_ll coefList=(a_bkg,b_bkg) ]
+     p.d.f value is less than zero (-0.039622), forcing value to zero @ x=M_ll=83.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798)
+     p.d.f value is less than zero (-0.266826), forcing value to zero @ x=M_ll=84.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798)
+     p.d.f value is less than zero (-0.466629), forcing value to zero @ x=M_ll=85.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798)
+     p.d.f value is less than zero (-0.639029), forcing value to zero @ x=M_ll=86.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798)
+     p.d.f value is less than zero (-0.784027), forcing value to zero @ x=M_ll=87.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798)
+     p.d.f value is less than zero (-0.901623), forcing value to zero @ x=M_ll=88.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798)
+     p.d.f value is less than zero (-0.991816), forcing value to zero @ x=M_ll=89.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798)
+     p.d.f value is less than zero (-1.054608), forcing value to zero @ x=M_ll=90.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798)
+     p.d.f value is less than zero (-1.089997), forcing value to zero @ x=M_ll=91.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798)
+     p.d.f value is less than zero (-1.097984), forcing value to zero @ x=M_ll=92.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798)
+     p.d.f value is less than zero (-1.078568), forcing value to zero @ x=M_ll=93.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798)
+     p.d.f value is less than zero (-1.031751), forcing value to zero @ x=M_ll=94.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798)
+    ... (remaining 8 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-2.87917e+08) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N_bkg=2.8e+06, N_sig=1.9e+07, a_bkg=0.1, alpha=1, b_bkg=-1.90202, enne=4, fracsig=0.76, mean=91, mean2=91, sigma=1.7, sigma2=3
+RooChebychev::bkgpdf[ x=M_ll coefList=(a_bkg,b_bkg) ]
+     p.d.f value is less than zero (-0.784899), forcing value to zero @ x=M_ll=75.5, coefList=(a_bkg = 0.1,b_bkg = -1.90202)
+     p.d.f value is less than zero (-0.369279), forcing value to zero @ x=M_ll=76.5, coefList=(a_bkg = 0.1,b_bkg = -1.90202)
+     p.d.f value is less than zero (-0.186422), forcing value to zero @ x=M_ll=108.5, coefList=(a_bkg = 0.1,b_bkg = -1.90202)
+     p.d.f value is less than zero (-0.590613), forcing value to zero @ x=M_ll=109.5, coefList=(a_bkg = 0.1,b_bkg = -1.90202)
+
+ FCN=-2.90465e+08 FROM MIGRAD    STATUS=INITIATE       50 CALLS          51 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  N_bkg        2.80000e+06   9.99000e+05   2.26262e-01   1.84502e+05
+   2  N_sig        1.90000e+07   9.00000e+06   2.43190e-01  -7.15969e+05
+   3  a_bkg        1.00000e-01   2.00000e+00   2.01369e-01   0.00000e+00
+   4  alpha        1.00000e+00   1.90000e-01   2.01653e-01  -2.91218e+04
+   5  b_bkg        1.00000e-01   2.00000e+00   2.01369e-01   0.00000e+00
+   6  enne         4.00000e+00   9.90000e-01   2.06330e-01  -3.96149e+04
+   7  fracsig      7.60000e-01   1.00000e-01   2.39036e-01   5.12089e+05
+   8  mean         9.10000e+01   1.00000e+00   2.05758e-01  -1.47434e+05
+   9  mean2        9.10000e+01   2.00000e+00   2.25216e-01  -1.44205e+06
+  10  sigma        1.70000e+00   4.90000e-01   2.15615e-01  -9.17240e+05
+  11  sigma2       3.00000e+00   4.90000e-01   2.05049e-01  -5.78445e+05
+                               ERR DEF= 0.5
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-2.90782e+08 FROM HESSE     STATUS=OK            118 CALLS         972 TOTAL
+                     EDM=0.449103    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  N_bkg        2.48467e+06   6.88865e+03   6.84404e-03  -8.41241e+01
+   2  N_sig        1.95563e+07   8.03012e+03   1.40274e-03   7.16200e+01
+   3  a_bkg       -8.58888e-02   2.36223e-03   1.42803e-03   1.24141e+03
+   4  alpha        9.14382e-01   1.08547e-03   5.13940e-03   8.25501e+02
+   5  b_bkg       -5.32289e-01   2.30295e-03   1.72078e-03  -7.30751e+02
+   6  enne         4.91560e+00   3.47030e-02   2.22006e-02   2.72452e+02
+   7  fracsig      7.70879e-01   1.24154e-03   6.33720e-03  -4.69023e+02
+   8  mean         9.08108e+01   1.08005e-03   1.55813e-03   1.80155e+03
+   9  mean2        9.25960e+01   1.40779e-02   4.22583e-03   8.03548e+02
+  10  sigma        1.71123e+00   1.34392e-03   2.83655e-03  -4.80447e+02
+  11  sigma2       3.23037e+00   5.56951e-03   1.19057e-02  -2.45719e+01
+                               ERR DEF= 0.5
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ MIGRAD TERMINATED WITHOUT CONVERGENCE.
+ FCN=-2.90782e+08 FROM MIGRAD    STATUS=FAILED       1150 CALLS        1151 TOTAL
+                     EDM=0.188856    STRATEGY= 1      ERR MATRIX APPROXIMATE
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  N_bkg        2.48081e+06   6.89344e+03   6.84563e-03  -4.15867e+01
+   2  N_sig        1.95601e+07   8.03465e+03   1.40270e-03   5.27729e+01
+   3  a_bkg       -8.34612e-02   2.37606e-03   1.43113e-03   7.88898e+02
+   4  alpha        9.16235e-01   1.09277e-03   5.13996e-03   4.66187e+02
+   5  b_bkg       -5.33808e-01   2.31028e-03   1.72452e-03  -6.96133e+02
+   6  enne         4.84357e+00   3.37112e-02   2.18125e-02   1.34479e+02
+   7  fracsig      7.69012e-01   1.24228e-03   6.34422e-03  -1.70611e+02
+   8  mean         9.08115e+01   1.08102e-03   1.55903e-03   5.82048e+02
+   9  mean2        9.25738e+01   1.39248e-02   4.20841e-03   3.64976e+02
+  10  sigma        1.70968e+00   1.34832e-03   2.83965e-03  -2.51413e+02
+  11  sigma2       3.23616e+00   5.52325e-03   1.18767e-02   3.50032e+01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR= 11    ERR DEF=0.5
+  4.752e+07 
+ -4.501e+07  6.456e+07 
+ -9.768e+00  9.767e+00  5.646e-06 
+ -8.653e-01  8.665e-01  3.779e-07  1.194e-06 
+ -6.083e+00  6.073e+00 -1.377e-06 -2.444e-07  5.337e-06 
+  8.859e+01 -8.862e+01 -4.873e-05 -2.546e-05  2.307e-05  1.136e-03 
+ -1.807e+00  1.807e+00  1.214e-08 -5.282e-07  6.362e-07  2.271e-05  1.543e-06 
+ -1.542e+00  1.543e+00 -1.956e-08  4.147e-07  4.628e-07 -6.500e-06 -4.708e-08  1.169e-06 
+ -2.509e+01  2.507e+01  1.991e-06 -7.848e-06  7.197e-06  2.435e-04  1.631e-05 -3.535e-06  1.939e-04 
+ -2.088e+00  2.087e+00 -2.238e-07 -1.530e-07  9.962e-07  2.181e-05  1.358e-06  1.596e-07  1.278e-05  1.818e-06 
+ -1.564e+01  1.564e+01  2.007e-07  3.443e-06  4.737e-06 -5.851e-05 -1.263e-06  4.233e-06 -2.650e-05  6.854e-07  3.051e-05 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6      7      8      9     10     11
+        1  0.93157   1.000 -0.813 -0.596 -0.115 -0.382  0.381 -0.211 -0.207 -0.261 -0.225 -0.411
+        2  0.81965  -0.813  1.000  0.512  0.099  0.327 -0.327  0.181  0.178  0.224  0.193  0.352
+        3  0.85926  -0.596  0.512  1.000  0.146 -0.251 -0.608  0.004 -0.008  0.060 -0.070  0.015
+        4  0.92643  -0.115  0.099  0.146  1.000 -0.097 -0.691 -0.389  0.351 -0.516 -0.104  0.570
+        5  0.77403  -0.382  0.327 -0.251 -0.097  1.000  0.296  0.222  0.185  0.224  0.320  0.371
+        6  0.96289   0.381 -0.327 -0.608 -0.691  0.296  1.000  0.542 -0.178  0.519  0.480 -0.314
+        7  0.98308  -0.211  0.181  0.004 -0.389  0.222  0.542  1.000 -0.035  0.943  0.811 -0.184
+        8  0.79648  -0.207  0.178 -0.008  0.351  0.185 -0.178 -0.035  1.000 -0.235  0.109  0.709
+        9  0.98191  -0.261  0.224  0.060 -0.516  0.224  0.519  0.943 -0.235  1.000  0.681 -0.345
+       10  0.91119  -0.225  0.193 -0.070 -0.104  0.320  0.480  0.811  0.109  0.681  1.000  0.092
+       11  0.90319  -0.411  0.352  0.015  0.570  0.371 -0.314 -0.184  0.709 -0.345  0.092  1.000
+ ERR MATRIX APPROXIMATE
+ **********
+ **    7 **SET ERR         0.5
+ **********
+ **********
+ **    8 **SET PRINT           1
+ **********
+ **********
+ **    9 **HESSE        5500
+ **********
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-2.90782e+08 FROM HESSE     STATUS=OK            100 CALLS        1251 TOTAL
+                     EDM=0.409075    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  N_bkg        2.48081e+06   7.43541e+03   2.73825e-04  -5.29781e-01
+   2  N_sig        1.95601e+07   8.50672e+03   5.61079e-05  -6.75193e-01
+   3  a_bkg       -8.34612e-02   2.97209e-03   5.72453e-05  -8.34622e-03
+   4  alpha        9.16235e-01   1.87062e-03   2.05599e-04  -1.41275e-01
+   5  b_bkg       -5.33808e-01   2.56981e-03   6.89809e-05  -5.34062e-02
+   6  enne         4.84357e+00   6.37631e-02   8.72499e-04  -4.17144e-02
+   7  fracsig      7.69012e-01   1.99080e-03   1.26884e-03   5.68091e-01
+   8  mean         9.08115e+01   1.28251e-03   3.11806e-04   1.63016e-01
+   9  mean2        9.25738e+01   2.31319e-02   1.68336e-04   9.37202e-01
+  10  sigma        1.70968e+00   1.84714e-03   1.13586e-04  -3.50095e-01
+  11  sigma2       3.23616e+00   7.57882e-03   4.75068e-04   2.83860e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR= 11    ERR DEF=0.5
+  5.529e+07 
+ -5.280e+07  7.236e+07 
+ -1.461e+01  1.461e+01  8.833e-06 
+ -5.087e+00  5.087e+00  2.880e-06  3.499e-06 
+ -2.630e+00  2.630e+00 -3.559e-06 -1.743e-06  6.604e-06 
+  2.395e+02 -2.396e+02 -1.410e-04 -1.073e-04  8.062e-05  4.066e-03 
+  2.179e+00 -2.179e+00 -2.390e-06 -2.866e-06  2.097e-06  1.047e-04  3.963e-06 
+ -3.147e+00  3.147e+00  9.011e-07  1.415e-06 -9.277e-08 -4.081e-05 -1.113e-06  1.645e-06 
+  2.174e+01 -2.174e+01 -2.596e-05 -3.545e-05  2.401e-05  1.208e-03  4.502e-05 -1.626e-05  5.351e-04 
+  1.223e+00 -1.223e+00 -2.265e-06 -2.053e-06  2.255e-06  8.919e-05  3.310e-06 -6.812e-07  3.585e-05  3.412e-06 
+ -2.808e+01  2.808e+01  7.383e-06  1.108e-05  3.517e-07 -3.216e-04 -9.304e-06  7.812e-06 -1.224e-04 -5.685e-06  5.744e-05 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6      7      8      9     10     11
+        1  0.94149   1.000 -0.835 -0.661 -0.366 -0.138  0.505  0.147 -0.330  0.126  0.089 -0.498
+        2  0.84097  -0.835  1.000  0.578  0.320  0.120 -0.442 -0.129  0.288 -0.111 -0.078  0.436
+        3  0.91254  -0.661  0.578  1.000  0.518 -0.466 -0.744 -0.404  0.236 -0.378 -0.413  0.328
+        4  0.97552  -0.366  0.320  0.518  1.000 -0.363 -0.899 -0.770  0.590 -0.819 -0.594  0.782
+        5  0.82215  -0.138  0.120 -0.466 -0.363  1.000  0.492  0.410 -0.028  0.404  0.475  0.018
+        6  0.98976   0.505 -0.442 -0.744 -0.899  0.492  1.000  0.825 -0.499  0.819  0.757 -0.665
+        7  0.99345   0.147 -0.129 -0.404 -0.770  0.410  0.825  1.000 -0.436  0.978  0.900 -0.617
+        8  0.86037  -0.330  0.288  0.236  0.590 -0.028 -0.499 -0.436  1.000 -0.548 -0.288  0.804
+        9  0.99348   0.126 -0.111 -0.378 -0.819  0.404  0.819  0.978 -0.548  1.000  0.839 -0.698
+       10  0.95371   0.089 -0.078 -0.413 -0.594  0.475  0.757  0.900 -0.288  0.839  1.000 -0.406
+       11  0.94981  -0.498  0.436  0.328  0.782  0.018 -0.665 -0.617  0.804 -0.698 -0.406  1.000
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(totpdf) directly selected PDF components: (bkgpdf)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(totpdf) indirectly selected PDF components: ()
+516494.798733
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooAddPdf::sigpdf
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooCBShape::sigpdf1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::M_ll
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::mean
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::sigma
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::alpha
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::enne
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooGaussian::sigpdf2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::mean2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::sigma2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::fracsig
