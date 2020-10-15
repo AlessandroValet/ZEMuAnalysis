@@ -1,0 +1,252 @@
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(data): fit range of variable M_ll expanded to nearest bin boundaries: [75,110] --> [75,110]
+Number of events to fit  35
+[#1] INFO:Minization -- p.d.f. provides expected number of events, including extended term in likelihood.
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sigpdf1,sigpdf2,bkgpdf)
+ **********
+ **    1 **SET PRINT           1
+ **********
+ **********
+ **    2 **SET NOGRAD
+ **********
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 N_bkg        9.28000e+05  4.59000e+05    1.00000e+04  1.00000e+07
+     2 N_sig        7.29000e+06  9.00000e+05    1.00000e+06  1.00000e+07
+     3 a_bkg        1.00000e-01  1.00000e+00   -5.00000e+00  5.00000e+00
+     4 alpha        1.00000e+00  1.90000e-01    1.00000e-01  2.00000e+00
+     5 b_bkg        1.00000e-01  2.00000e+00   -1.00000e+01  1.00000e+01
+     6 c_bkg        0.00000e+00  2.00000e+00   -1.00000e+01  1.00000e+01
+     7 enne         7.00000e+00  9.90000e-01    1.00000e-01  1.00000e+01
+     8 fracsig      6.50000e-01  1.00000e-01    0.00000e+00  1.00000e+00
+     9 mean         9.10000e+01  1.00000e+00    8.50000e+01  9.50000e+01
+    10 mean2        9.10000e+01  2.00000e+00    7.00000e+01  9.50000e+01
+    11 sigma        2.10000e+00  4.90000e-01    1.00000e-01  5.00000e+00
+    12 sigma2       3.80000e+00  4.90000e-01    1.00000e-01  5.00000e+00
+ **********
+ **    3 **SET ERR         0.5
+ **********
+ **********
+ **    4 **SET PRINT           1
+ **********
+ **********
+ **    5 **SET STR           1
+ **********
+ NOW USING STRATEGY  1: TRY TO BALANCE SPEED AGAINST RELIABILITY
+ **********
+ **    6 **MIGRAD        6000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-9.9237e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N_bkg=928000, N_sig=7.29e+06, a_bkg=0.1, alpha=1, b_bkg=2.09798, c_bkg=0, enne=7, fracsig=0.65, mean=91, mean2=91, sigma=2.1, sigma2=3.8
+RooChebychev::bkgpdf[ x=M_ll coefList=(a_bkg,b_bkg,c_bkg) ]
+     p.d.f value is less than zero (-0.039622), forcing value to zero @ x=M_ll=83.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798,c_bkg = 0)
+     p.d.f value is less than zero (-0.266826), forcing value to zero @ x=M_ll=84.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798,c_bkg = 0)
+     p.d.f value is less than zero (-0.466629), forcing value to zero @ x=M_ll=85.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798,c_bkg = 0)
+     p.d.f value is less than zero (-0.639029), forcing value to zero @ x=M_ll=86.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798,c_bkg = 0)
+     p.d.f value is less than zero (-0.784027), forcing value to zero @ x=M_ll=87.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798,c_bkg = 0)
+     p.d.f value is less than zero (-0.901623), forcing value to zero @ x=M_ll=88.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798,c_bkg = 0)
+     p.d.f value is less than zero (-0.991816), forcing value to zero @ x=M_ll=89.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798,c_bkg = 0)
+     p.d.f value is less than zero (-1.054608), forcing value to zero @ x=M_ll=90.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798,c_bkg = 0)
+     p.d.f value is less than zero (-1.089997), forcing value to zero @ x=M_ll=91.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798,c_bkg = 0)
+     p.d.f value is less than zero (-1.097984), forcing value to zero @ x=M_ll=92.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798,c_bkg = 0)
+     p.d.f value is less than zero (-1.078568), forcing value to zero @ x=M_ll=93.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798,c_bkg = 0)
+     p.d.f value is less than zero (-1.031751), forcing value to zero @ x=M_ll=94.5, coefList=(a_bkg = 0.1,b_bkg = 2.09798,c_bkg = 0)
+    ... (remaining 8 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-9.9237e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N_bkg=928000, N_sig=7.29e+06, a_bkg=0.1, alpha=1, b_bkg=-1.90202, c_bkg=0, enne=7, fracsig=0.65, mean=91, mean2=91, sigma=2.1, sigma2=3.8
+RooChebychev::bkgpdf[ x=M_ll coefList=(a_bkg,b_bkg,c_bkg) ]
+     p.d.f value is less than zero (-0.784899), forcing value to zero @ x=M_ll=75.5, coefList=(a_bkg = 0.1,b_bkg = -1.90202,c_bkg = 0)
+     p.d.f value is less than zero (-0.369279), forcing value to zero @ x=M_ll=76.5, coefList=(a_bkg = 0.1,b_bkg = -1.90202,c_bkg = 0)
+     p.d.f value is less than zero (-0.186422), forcing value to zero @ x=M_ll=108.5, coefList=(a_bkg = 0.1,b_bkg = -1.90202,c_bkg = 0)
+     p.d.f value is less than zero (-0.590613), forcing value to zero @ x=M_ll=109.5, coefList=(a_bkg = 0.1,b_bkg = -1.90202,c_bkg = 0)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-9.9237e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N_bkg=928000, N_sig=7.29e+06, a_bkg=0.1, alpha=1, b_bkg=0.1, c_bkg=2, enne=7, fracsig=0.65, mean=91, mean2=91, sigma=2.1, sigma2=3.8
+RooChebychev::bkgpdf[ x=M_ll coefList=(a_bkg,b_bkg,c_bkg) ]
+     p.d.f value is less than zero (-0.513528), forcing value to zero @ x=M_ll=75.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = 2)
+     p.d.f value is less than zero (-0.065248), forcing value to zero @ x=M_ll=95.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = 2)
+     p.d.f value is less than zero (-0.342589), forcing value to zero @ x=M_ll=96.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = 2)
+     p.d.f value is less than zero (-0.582799), forcing value to zero @ x=M_ll=97.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = 2)
+     p.d.f value is less than zero (-0.776921), forcing value to zero @ x=M_ll=98.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = 2)
+     p.d.f value is less than zero (-0.916000), forcing value to zero @ x=M_ll=99.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = 2)
+     p.d.f value is less than zero (-0.991079), forcing value to zero @ x=M_ll=100.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = 2)
+     p.d.f value is less than zero (-0.993201), forcing value to zero @ x=M_ll=101.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = 2)
+     p.d.f value is less than zero (-0.913411), forcing value to zero @ x=M_ll=102.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = 2)
+     p.d.f value is less than zero (-0.742752), forcing value to zero @ x=M_ll=103.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = 2)
+     p.d.f value is less than zero (-0.472268), forcing value to zero @ x=M_ll=104.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = 2)
+     p.d.f value is less than zero (-0.093003), forcing value to zero @ x=M_ll=105.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = 2)
+    ... (remaining 2 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-9.9237e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N_bkg=928000, N_sig=7.29e+06, a_bkg=0.1, alpha=1, b_bkg=0.1, c_bkg=-2, enne=7, fracsig=0.65, mean=91, mean2=91, sigma=2.1, sigma2=3.8
+RooChebychev::bkgpdf[ x=M_ll coefList=(a_bkg,b_bkg,c_bkg) ]
+     p.d.f value is less than zero (-0.241574), forcing value to zero @ x=M_ll=79.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = -2)
+     p.d.f value is less than zero (-0.609411), forcing value to zero @ x=M_ll=80.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = -2)
+     p.d.f value is less than zero (-0.868466), forcing value to zero @ x=M_ll=81.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = -2)
+     p.d.f value is less than zero (-1.027697), forcing value to zero @ x=M_ll=82.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = -2)
+     p.d.f value is less than zero (-1.096058), forcing value to zero @ x=M_ll=83.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = -2)
+     p.d.f value is less than zero (-1.082507), forcing value to zero @ x=M_ll=84.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = -2)
+     p.d.f value is less than zero (-0.996000), forcing value to zero @ x=M_ll=85.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = -2)
+     p.d.f value is less than zero (-0.845493), forcing value to zero @ x=M_ll=86.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = -2)
+     p.d.f value is less than zero (-0.639942), forcing value to zero @ x=M_ll=87.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = -2)
+     p.d.f value is less than zero (-0.388303), forcing value to zero @ x=M_ll=88.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = -2)
+     p.d.f value is less than zero (-0.099534), forcing value to zero @ x=M_ll=89.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = -2)
+     p.d.f value is less than zero (-0.319242), forcing value to zero @ x=M_ll=109.5, coefList=(a_bkg = 0.1,b_bkg = 0.1,c_bkg = -2)
+    ... (remaining 2 messages suppressed)
+
+ FCN=-9.94132e+07 FROM MIGRAD    STATUS=INITIATE       58 CALLS          59 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  N_bkg        9.28000e+05   4.59000e+05   1.64345e-01   1.75607e+05
+   2  N_sig        7.29000e+06   9.00000e+05   2.20818e-01  -3.51815e+04
+   3  a_bkg        1.00000e-01   1.00000e+00   2.01400e-01  -2.47319e+05
+   4  alpha        1.00000e+00   1.90000e-01   2.01653e-01   8.40041e+03
+   5  b_bkg        1.00000e-01   2.00000e+00   2.01369e-01   0.00000e+00
+   6  c_bkg        0.00000e+00   2.00000e+00   2.01358e-01   0.00000e+00
+   7  enne         7.00000e+00   9.90000e-01   2.20385e-01  -1.28691e+04
+   8  fracsig      6.50000e-01   1.00000e-01   2.11716e-01   1.34440e+05
+   9  mean         9.10000e+01   1.00000e+00   2.05758e-01   7.64496e+05
+  10  mean2        9.10000e+01   2.00000e+00   2.25216e-01   2.38895e+04
+  11  sigma        2.10000e+00   4.90000e-01   2.05049e-01  -4.33771e+04
+  12  sigma2       3.80000e+00   4.90000e-01   2.37190e-01  -1.05014e+05
+                               ERR DEF= 0.5
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ FCN=-9.95325e+07 FROM MIGRAD    STATUS=CONVERGED    1193 CALLS        1194 TOTAL
+                     EDM=0.00476473    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   4.5 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  N_bkg        8.65482e+05   3.22152e+03   0.00000e+00   2.29489e+00
+   2  N_sig        7.35816e+06   4.12342e+03  -0.00000e+00   8.32241e+00
+   3  a_bkg        3.59921e-01   3.14077e-03  -0.00000e+00   2.04925e+01
+   4  alpha        9.81154e-01   2.37363e-03   0.00000e+00   3.11994e+01
+   5  b_bkg       -6.20117e-01   4.19107e-03   0.00000e+00  -1.94851e+02
+   6  c_bkg       -1.41501e-01   3.74290e-03   0.00000e+00   4.95463e+01
+   7  enne         9.99993e+00   4.93572e-03  -0.00000e+00   2.77974e+00
+   8  fracsig      6.41815e-01   1.33069e-03   0.00000e+00  -1.83172e+01
+   9  mean         9.03358e+01   2.92436e-03   0.00000e+00  -7.70049e+01
+  10  mean2        9.16400e+01   9.44252e-03   0.00000e+00  -8.80070e+01
+  11  sigma        2.12777e+00   2.30396e-03   0.00000e+00  -5.49377e+01
+  12  sigma2       3.91281e+00   9.55024e-03   0.00000e+00  -1.58767e+01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR= 12    ERR DEF=0.5
+ ELEMENTS ABOVE DIAGONAL ARE NOT PRINTED.
+  1.038e+07 
+ -9.679e+06  1.700e+07 
+ -3.474e+00  3.533e+00  9.864e-06 
+ -1.018e+00  9.487e-01 -3.779e-06  5.634e-06 
+ -9.292e+00  9.774e+00 -1.091e-07  4.032e-06  1.757e-05 
+  4.148e+00 -4.016e+00 -4.907e-06  2.883e-06 -6.851e-07  1.401e-05 
+ -1.609e+00  1.543e+00  1.822e-06 -5.995e-07  4.584e-07 -8.592e-07  1.429e-06 
+  1.093e+00 -1.139e+00 -7.137e-08  3.154e-07 -1.943e-06  8.052e-07  6.965e-07  1.771e-06 
+ -3.585e+00  3.658e+00 -1.501e-06  3.773e-06  5.254e-06  9.664e-07 -2.886e-07  6.734e-08  8.552e-06 
+  1.266e+01 -1.218e+01  1.643e-06 -9.997e-06 -2.015e-05  7.540e-06  5.370e-06  7.696e-06 -1.562e-05  8.916e-05 
+  5.299e-02 -2.522e-01  4.867e-07  2.044e-06 -9.181e-07 -1.528e-07  7.637e-07  1.983e-06  8.008e-07  3.494e-06  5.308e-06 
+ -1.631e+01  1.682e+01 -6.483e-06  1.708e-05  2.330e-05  4.774e-06  4.612e-07  6.580e-07  2.184e-05 -4.714e-05  3.812e-06 
+ -1.631e+01  1.682e+01 -6.483e-06  1.708e-05  2.330e-05  4.774e-06  4.612e-07  6.580e-07  2.184e-05 -4.714e-05  3.812e-06  9.121e-05 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6      7      8      9     10     11     12
+        1  0.91094   1.000 -0.729 -0.343 -0.133 -0.688  0.344 -0.418  0.255 -0.381  0.416  0.007 -0.530
+        2  0.74553  -0.729  1.000  0.273  0.097  0.566 -0.260  0.313 -0.208  0.303 -0.313 -0.027  0.427
+        3  0.80997  -0.343  0.273  1.000 -0.507 -0.008 -0.417  0.485 -0.017 -0.163  0.055  0.067 -0.216
+        4  0.93470  -0.133  0.097 -0.507  1.000  0.405  0.325 -0.211  0.100  0.544 -0.446  0.374  0.753
+        5  0.80538  -0.688  0.566 -0.008  0.405  1.000 -0.044  0.091 -0.348  0.429 -0.509 -0.095  0.582
+        6  0.72225   0.344 -0.260 -0.417  0.325 -0.044  1.000 -0.192  0.162  0.088  0.213 -0.018  0.134
+        7  0.89029  -0.418  0.313  0.485 -0.211  0.091 -0.192  1.000  0.438 -0.083  0.476  0.277  0.040
+        8  0.91512   0.255 -0.208 -0.017  0.100 -0.348  0.162  0.438  1.000  0.017  0.612  0.647  0.052
+        9  0.85604  -0.381  0.303 -0.163  0.544  0.429  0.088 -0.083  0.017  1.000 -0.565  0.119  0.782
+       10  0.95050   0.416 -0.313  0.055 -0.446 -0.509  0.213  0.476  0.612 -0.565  1.000  0.161 -0.523
+       11  0.83664   0.007 -0.027  0.067  0.374 -0.095 -0.018  0.277  0.647  0.119  0.161  1.000  0.173
+       12  0.94056  -0.530  0.427 -0.216  0.753  0.582  0.134  0.040  0.052  0.782 -0.523  0.173  1.000
+ ELEMENTS ABOVE DIAGONAL ARE NOT PRINTED.
+ **********
+ **    7 **SET ERR         0.5
+ **********
+ **********
+ **    8 **SET PRINT           1
+ **********
+ **********
+ **    9 **HESSE        6000
+ **********
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -2.2123e-04  5.4891e-02  7.3743e-02  2.6471e-01  3.4194e-01  4.7114e-01  9.5031e-01  1.1328e+00  1.2240e+00  1.5126e+00  2.8830e+00  3.0910e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.003312 TO DIAGONAL.
+ FCN=-9.95325e+07 FROM HESSE     STATUS=NOT POSDEF    139 CALLS        1333 TOTAL
+                     EDM=0.5277    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  N_bkg        8.65482e+05   1.18746e+04   3.67913e-03  -9.76839e-01
+   2  N_sig        7.35816e+06   1.20976e+04   4.73303e-03   4.25662e-01
+   3  a_bkg        3.59921e-01   1.30467e-02   2.91532e-03   7.20466e-02
+   4  alpha        9.81154e-01   4.48177e-03   6.49111e-03  -7.25333e-02
+   5  b_bkg       -6.20117e-01   5.31784e-03   1.74465e-03  -6.20515e-02
+   6  c_bkg       -1.41501e-01   8.12286e-03   1.77978e-03  -1.41506e-02
+   7  enne         9.99993e+00   2.12274e-02   3.93585e-01   1.57620e+00
+   8  fracsig      6.41815e-01   4.86913e-03   7.54302e-03   2.87578e-01
+   9  mean         9.03358e+01   3.27038e-03   2.11216e-03   6.72048e-02
+  10  mean2        9.16400e+01   3.47029e-02   3.05598e-03   8.20082e-01
+  11  sigma        2.12777e+00   5.79575e-03   3.59064e-03  -1.73202e-01
+  12  sigma2       3.91281e+00   9.44804e-03   1.10351e-02   5.89865e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR= 12    ERR DEF=0.5
+ ELEMENTS ABOVE DIAGONAL ARE NOT PRINTED.
+  1.410e+08 
+ -1.396e+08  1.464e+08 
+ -1.489e+02  1.483e+02  1.702e-04 
+  4.385e+01 -4.367e+01 -5.180e-05  2.009e-05 
+ -4.758e+01  4.738e+01  4.360e-05 -1.051e-05  2.828e-05 
+  8.671e+01 -8.635e+01 -9.710e-05  3.043e-05 -2.474e-05  6.598e-05 
+ -3.765e+00  3.749e+00  5.679e-06  2.485e-07 -6.932e-08 -3.263e-06  6.151e-06 
+ -5.171e+01  5.150e+01  5.778e-05 -1.785e-05  1.421e-05 -3.245e-05 -3.744e-07  2.371e-05 
+  1.780e+01 -1.773e+01 -2.330e-05  9.922e-06 -2.435e-06  1.322e-05 -3.400e-07 -7.857e-06  1.070e-05 
+ -3.696e+02  3.681e+02  4.164e-04 -1.378e-04  9.953e-05 -2.297e-04 -7.455e-07  1.643e-04 -7.152e-05  1.204e-03 
+ -6.009e+01  5.985e+01  6.651e-05 -1.901e-05  1.737e-05 -3.815e-05 -5.686e-07  2.699e-05 -8.380e-06  1.829e-04  3.359e-05 
+ -5.634e+01  5.613e+01  4.234e-05 -1.418e-06  3.192e-05 -2.206e-05 -7.235e-07  1.902e-05  1.053e-05  9.550e-05  2.390e-05 
+ -5.634e+01  5.613e+01  4.234e-05 -1.418e-06  3.192e-05 -2.206e-05 -7.235e-07  1.902e-05  1.053e-05  9.550e-05  2.390e-05  8.927e-05 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6      7      8      9     10     11     12
+        1  0.99209   1.000 -0.972 -0.961  0.824 -0.753  0.899 -0.128 -0.894  0.458 -0.897 -0.873 -0.502
+        2  0.97263  -0.972  1.000  0.940 -0.805  0.737 -0.879  0.125  0.874 -0.448  0.877  0.854  0.491
+        3  0.98687  -0.961  0.940  1.000 -0.886  0.628 -0.916  0.176  0.910 -0.546  0.920  0.880  0.343
+        4  0.98003   0.824 -0.805 -0.886  1.000 -0.441  0.836  0.022 -0.818  0.677 -0.886 -0.732 -0.033
+        5  0.88022  -0.753  0.737  0.628 -0.441  1.000 -0.573 -0.005  0.549 -0.140  0.539  0.564  0.635
+        6  0.94825   0.899 -0.879 -0.916  0.836 -0.573  1.000 -0.162 -0.820  0.498 -0.815 -0.810 -0.288
+        7  0.79304  -0.128  0.125  0.176  0.022 -0.005 -0.162  1.000 -0.031 -0.042 -0.009 -0.040 -0.031
+        8  0.99419  -0.894  0.874  0.910 -0.818  0.549 -0.820 -0.031  1.000 -0.493  0.972  0.956  0.413
+        9  0.88432   0.458 -0.448 -0.546  0.677 -0.140  0.498 -0.042 -0.493  1.000 -0.630 -0.442  0.341
+       10  0.99406  -0.897  0.877  0.920 -0.886  0.539 -0.815 -0.009  0.972 -0.630  1.000  0.909  0.291
+       11  0.97625  -0.873  0.854  0.880 -0.732  0.564 -0.810 -0.040  0.956 -0.442  0.909  1.000  0.436
+       12  0.93869  -0.502  0.491  0.343 -0.033  0.635 -0.288 -0.031  0.413  0.341  0.291  0.436  1.000
+ ERR MATRIX NOT POS-DEF
+ ELEMENTS ABOVE DIAGONAL ARE NOT PRINTED.
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(totpdf) directly selected PDF components: (bkgpdf)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(totpdf) indirectly selected PDF components: ()
+195403.352392
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooAddPdf::sigpdf
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooCBShape::sigpdf1
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::M_ll
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::mean
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::sigma
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::alpha
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::enne
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooGaussian::sigpdf2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::mean2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::sigma2
+[#1] INFO:ObjectHandling -- RooWorkspace::import(ws) importing RooRealVar::fracsig
