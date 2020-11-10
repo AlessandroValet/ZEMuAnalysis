@@ -12,14 +12,30 @@ data = ws.data("dataset")
 
 ws.Print()
 
+nuisance_params = ROOT.RooArgSet()
+nuisance_params.add(ws.var("a_bkg"))
+nuisance_params.add(ws.var("b_bkg"))
+nuisance_params.add(ws.var("c_bkg"))
+nuisance_params.add(ws.var("Nbkg"))
+nuisance_params.add(ws.var("efficiency"))
+
+glb_list = ROOT.RooArgSet()
+glb_list.add(ws.var("globaleff"))
+
+
 #Set the RooModelConfig and let it know what the content of the workspace is about
 model = ROOT.RooStats.ModelConfig()
 model.SetWorkspace(ws)
 model.SetPdf("finalPDF")
 model.SetParametersOfInterest(poi_list)
 model.SetObservables(obs_list)
+model.SetNuisanceParameters(nuisance_params)
+model.SetGlobalObservables(glb_list)
 model.SetName("S+B Model")
 model.SetProtoData(data)
+
+
+
 print "model set!"
 
 bModel = model.Clone()
@@ -31,6 +47,7 @@ poi_list.find("br_rat").setVal(oldval)
 
 fc = ROOT.RooStats.AsymptoticCalculator(data, bModel, model)
 fc.SetOneSided(1)
+
 #Create hypotest inverter passing desired calculator
 calc = ROOT.RooStats.HypoTestInverter(fc)
 calc.SetConfidenceLevel(0.95)
@@ -77,5 +94,7 @@ print " expected limit (median) ", result.GetExpectedUpperLimit(0)
 print " expected limit (-1 sig) ", result.GetExpectedUpperLimit(-1)
 print " expected limit (+1 sig) ", result.GetExpectedUpperLimit(1)
 print "################"
+
+
 
 del fc
